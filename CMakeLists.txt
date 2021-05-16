@@ -6,4 +6,5 @@ project(GBRun
     LANGUAGES CXX
 )
 
+add_subdirectory(GBLib)
 add_subdirectory(GBRun)
