@@ -1,8 +1,10 @@
 #pragma once
 
+#include <cstdint>
+
 namespace GBLib {
 
-enum class CartridgeType {
+enum class CartridgeType : uint8_t {
     romOnly,
     mbc1,
     mbc1RAM,
