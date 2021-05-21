@@ -1,6 +1,8 @@
 add_library(GBLib
     CartridgeHeader.cpp
     CartridgeHeader.hpp
+    CartridgeROM.cpp
+    CartridgeROM.hpp
     CartridgeType.cpp
     CartridgeType.hpp
 )
