@@ -7,6 +7,8 @@
 
 namespace GBLib {
 
+#pragma pack(push)
+#pragma pack(1) // std::memcpy()
 struct CartridgeHeader {
     std::array<uint8_t, 16> title;
     std::array<uint8_t, 2> newLicenseeCode;
@@ -20,5 +22,6 @@ struct CartridgeHeader {
     uint8_t headerChecksum;
     uint16_t globalChecksum;
 };
+#pragma pack(pop)
 
 } // namespace GBLib
