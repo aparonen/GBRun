@@ -1,6 +1,7 @@
 #include "CartridgeROM.hpp"
 
 #include <cstring>
+#include <ostream>
 
 #include "CartridgeHeader.hpp"
 
@@ -22,6 +23,14 @@ CartridgeROM::CartridgeROM(const std::vector<uint8_t>& bytes)
     : m_header(parseHeader(bytes))
     , m_bytes(bytes)
 {
+}
+
+std::ostream& operator<<(std::ostream& os, const CartridgeROM& rom)
+{
+    for (const auto& c : rom.m_header.title)
+        os << c;
+
+    return os;
 }
 
 } // namespace GBLib

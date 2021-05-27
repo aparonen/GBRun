@@ -23,6 +23,7 @@ int main(int argc, char** argv)
     ifs.read(reinterpret_cast<char*>(bytes.data()), size);
 
     const GBLib::CartridgeROM rom(bytes);
+    std::cout << "Loaded cartridge ROM: " << rom << '\n';
 
     return EXIT_SUCCESS;
 }
